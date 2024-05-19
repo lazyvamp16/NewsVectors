@@ -1,0 +1,12 @@
+/* Dropdown.css */
+
+.form-label{
+    color: rgb(55, 0, 0);
+    font-family:sans-serif;
+}
+
+.form-select {
+    color: rgb(58, 0, 0); /* Change font color to red */
+    background-color: rgba(205, 230, 255, 0.77);
+  }
+  
