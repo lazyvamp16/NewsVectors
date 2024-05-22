@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './dropdown.css'; // Import your CSS file
+import './Dropdown.css'; // Import your CSS file
 
 const Dropdown = () => {
   const [symbols, setSymbols] = useState([]);
