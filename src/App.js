@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container'; // Import Container component
 import Dropdown from './components/Dropdown'; // Import your Dropdown component
 import Contact from './components/Contact';
 import NewsPage from './components/NewsPage'; // Import your NewsPage component
+import SentimentPage from './components/SentimentPage'; // Import SentimentPage component
 
 
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
@@ -40,6 +41,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dropdown />} />
             <Route path="/news" element={<NewsPage />} />
+            <Route path="/sentiment-analysis" element={<SentimentPage />} />  
             <Route path="/contact" element={<Contact/>} />
           </Routes>
         </Container>
