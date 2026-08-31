@@ -9,7 +9,7 @@ const SentimentPage = () => {
   useEffect(() => {
     axios.get('http://localhost:8000/fetchemail/') // Adjust the URL to your API endpoint
       .then(response => {
-        setNewsData(response.data.messages);
+        setNewsData(response.data.news);
       })
       .catch(error => {
         console.error('There was an error fetching the data!', error);
