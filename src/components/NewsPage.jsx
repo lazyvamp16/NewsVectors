@@ -11,7 +11,9 @@ const NewsPage = () => {
   const [sortConfig, setSortConfig] = useState({ key: 'timestamp', direction: 'descending' });
 
   useEffect(() => {
-    axios.get('http://localhost:8000/fetchemail/') // Adjust the URL to your API endpoint
+    //axios.get('http://localhost:8000/fetchemail/')
+    const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+    axios.get(`${API_BASE_URL}/fetchemail/`) // Adjust the URL to your API endpoint
       .then(response => {
         setNewsData(response.data.news);
         setFilteredNews(response.data.news);

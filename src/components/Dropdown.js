@@ -8,7 +8,9 @@ const Dropdown = () => {
 
   useEffect(() => {
     // Fetch data from the API
-    axios.get('http://localhost:8000/symbols_json/')  // Adjust the URL to your API endpoint
+    //axios.get('http://localhost:8000/symbols_json/')
+    const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+    axios.get(`${API_BASE_URL}/symbols_json/`)  // Adjust the URL to your API endpoint
       .then(response => {
         setSymbols(response.data.symbols);
       })
@@ -21,10 +23,10 @@ const Dropdown = () => {
     setSelectedSymbol(event.target.value);
   };
 
-  
+
   return (
-    <div className="container mt-4"> 
-      <label htmlFor="symbol-dropdown" className="form-label">Choose a symbol:</label> 
+    <div className="container mt-4">
+      <label htmlFor="symbol-dropdown" className="form-label">Choose a symbol:</label>
       <select className="form-select " id="symbol-dropdown" value={selectedSymbol} onChange={handleChange}>
         <option value="">--Select a symbol--</option>
         {symbols.map((symbol, index) => (
